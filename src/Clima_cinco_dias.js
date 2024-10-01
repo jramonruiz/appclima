@@ -25,7 +25,7 @@ export function Clima_cinco_dias() {
                         while (i < 6) 
                             {
         
-                    const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/231934?apikey=yvYA8xAwKShO6mmR0asfDI8TVST9sqdN&language=es-mx&details=true&metric=true`);
+                    const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/231934?apikey=TUAPIKEY&language=es-mx&details=true&metric=true`);
                     setData(response.data); // Guardar datos de clima
                     setDate(response.data.DailyForecasts[i].Date);
 
@@ -45,18 +45,14 @@ export function Clima_cinco_dias() {
                     const fecha_pronostico = fecha_pronostico_completa.split("T");
                     const pronostico_fecha = fecha_pronostico[0];
       
-                    //fdia.push(xdiafrase);
                     fdia.push({ id: i, frase_del_dia: xdiafrase, icono_del_dia: xiconodia, 
                         probprec_dia: xprobprecipitaciondia, hrsprec_dia: xhorasprecipitaciondia, 
                     mmprec_dia: xmmprecipitacionesdia, frase_del_noche: xnochefrase, icono_del_noche: xiconnoche, 
                     probprec_noche: xprobprecipitacionnoche, hrsprec_noche: xhorasprecipitacionnoche, 
                 mmprec_noche: xmmprecipitacionesnoche, pronostico_fecha: pronostico_fecha });
-                    //newRows.push({ id: i, name: `Name ${i}`, age: Math.floor(Math.random() * 50) + 20 });
-
 
                     setPronosticos(fdia);
-                    //setPronosticos(fpronostico);
-
+                    
                 
                     i++;
                 }// cierre del while
@@ -71,14 +67,7 @@ export function Clima_cinco_dias() {
       
             fetchClima_cinco_dias(); // Llamar a la función para obtener datos
 
-
-
-
-
         }, []); // Ejecutar solo al montar el componente      
-
-
-  //console.log(fdia);
 
 return (        
         <table width="100%">
