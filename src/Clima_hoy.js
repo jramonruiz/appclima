@@ -2,11 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export function Clima_hoy() {
-  //const datamoncho ='http://dataservice.accuweather.com/forecasts/v1/daily/1day/231934?apikey=p01UCR3jb2YzLKkbCxIX9WgDWzxAiTOY&language=es-mx';
-  //fetch('https://jsonplaceholder.typicode.com/posts')
-  //.then(response => response.json())
-  //.then(data => console.log(data))
-  //.catch(error => console.error(error))
   const [data, setData] = useState();
   const [date, setDate] = useState();
   const [tempminima, setTempminima] = useState();
@@ -34,7 +29,7 @@ export function Clima_hoy() {
   useEffect(() => {
       const fetchClima = async () => {
           try {
-              const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/231934?apikey=yvYA8xAwKShO6mmR0asfDI8TVST9sqdN&language=es-mx&details=true&metric=true`);
+              const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/231934?apikey=TUAPIKEY&language=es-mx&details=true&metric=true`);
               setData(response.data); // Guardar datos de clima
               setDate(response.data.DailyForecasts[0].Date);
               //$viento_vel=$datos["DailyForecasts"][$j]["Day"]["Wind"]["Speed"]["Value"];
@@ -63,8 +58,6 @@ export function Clima_hoy() {
 
       fetchClima(); // Llamar a la función para obtener datos
   }, []); // Ejecutar solo al montar el componente
-
-  // para los iconos del clima: https://www.awxcdn.com/adc-assets/images/weathericons/14.svg
 
   console.log(tempmaxima);
 
