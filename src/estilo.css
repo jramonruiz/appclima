@@ -1,0 +1,90 @@
+body {
+    height: 100%; /* Altura completa de la ventana */
+    margin: 0; /* Sin margen */
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Degradado de arriba a abajo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+.shadow-box {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    /*margin-left: 50px;*/
+    margin-right: 50px;
+}
+
+.shadow-box_acerca_de {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin-left: 300px;
+  margin-right: 50px;
+  padding-left: 10px;
+}
+
+.texto_temperatura_diario {
+    color:black;
+    font-size: 15px;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.valor {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Navbar.css */
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-item {
+    margin: 0 15px;
+  }
+  
+  .navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbar-item a:hover {
+    text-decoration: underline;
+  }
+  
