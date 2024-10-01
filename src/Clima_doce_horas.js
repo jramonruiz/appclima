@@ -17,7 +17,7 @@ export function Clima_doce_horas() {
                     let i = 0; // Comenzamos desde 1
                         while (i < 13) 
                             {  
-                    const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/231934?apikey=yvYA8xAwKShO6mmR0asfDI8TVST9sqdN&language=es-mx&details=true&metric=true`);
+                    const response = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/231934?apikey=TUAPIKEY&language=es-mx&details=true&metric=true`);
                     setData(response.data); // Guardar datos de clima   
                     const xdiafrase = response.data[i].IconPhrase;
                     const icono = response.data[i].WeatherIcon;
@@ -56,21 +56,17 @@ export function Clima_doce_horas() {
                         visibilidadunidad: visibilidadunidad, hora:hora });
 
                     setPronosticos_horas(fhora);
-                    //setPronosticos(fpronostico);
 
                 
                     i++;
                 }// cierre del while
-
-                console.log('entrando a la api');     
+     
 
 
                 } catch (err) {
                     setError('No se pudo obtener el clima. Intenta de nuevo.');
-                    console.log('No se pudo obtener el clima');
                 } finally {
                     setLoading(false); // Cambiar el estado de carga
-                    console.log('cargando');
                 }
             };
       
@@ -78,8 +74,6 @@ export function Clima_doce_horas() {
 
         }, []); // Ejecutar solo al montar el componente      
 
-
-  //console.log(fdia);
 
 return (        
     <table width="100%">
